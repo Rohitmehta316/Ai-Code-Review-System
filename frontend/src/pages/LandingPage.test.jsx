@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{render,screen}from'@testing-library/react';import{MemoryRouter}from'react-router-dom';import LandingPage from'./LandingPage.jsx';
+describe('Landing page',()=>{it('describes code review and links to registration',()=>{render(<MemoryRouter><LandingPage/></MemoryRouter>);expect(screen.getByRole('heading',{name:/ship better code/i})).toBeInTheDocument();expect(screen.getByRole('link',{name:/start your first review/i})).toHaveAttribute('href','/register');});});
